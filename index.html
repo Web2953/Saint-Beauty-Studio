@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Beauty Studio - Professional Fat Freezing & Body Sculpting</title>
+    <meta name="description" content="Transform your body with our professional fat freezing packages. MASSIVE SPECIALS available! Book your consultation today.">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" as="image">
+    <link rel="preload" href="styles.css" as="style">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Saint Beauty Studio</div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-links desktop-nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#packages" class="nav-link">Packages</a>
+                    <a href="#booking" class="nav-link">Booking</a>
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <button class="btn btn-whatsapp btn-sm" onclick="handleWhatsAppClick('Hi! I\'d like to book a consultation for fat freezing packages.')">
+                        <i data-lucide="message-circle"></i>
+                        WhatsApp
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                    <i data-lucide="x" id="close-icon" style="display: none;"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <a href="#home" class="mobile-nav-link" onclick="closeMobileMenu()">Home</a>
+                <a href="#about" class="mobile-nav-link" onclick="closeMobileMenu()">About</a>
+                <a href="#packages" class="mobile-nav-link" onclick="closeMobileMenu()">Packages</a>
+                <a href="#booking" class="mobile-nav-link" onclick="closeMobileMenu()">Booking</a>
+                <a href="#gallery" class="mobile-nav-link" onclick="closeMobileMenu()">Gallery</a>
+                <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
+                <button class="btn btn-whatsapp" onclick="handleWhatsAppClick('Hi! I\'d like to book a consultation for fat freezing packages.')">
+                    <i data-lucide="message-circle"></i>
+                    WhatsApp Consultation
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <picture class="hero-bg">
+            <source media="(max-width: 768px)" srcset="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80">
+            <source media="(min-width: 769px)" srcset="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Luxury spa environment" loading="eager">
+        </picture>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Fat Freezing Packages
+                <span class="hero-special">MASSIVE SPECIAL!!!</span>
+            </h1>
+            <p class="hero-subtitle">Transform your body with our professional body sculpting treatments</p>
+            
+            <div class="hero-offer">
+                <h3>Book Now & Get a FREE Meal Plan!</h3>
+                <p>Limited time offer - Don't miss out!</p>
+            </div>
+            
+            <button class="btn btn-hero btn-xl" onclick="handleWhatsAppClick('Hi! I\'d like to book a consultation for fat freezing packages.')">
+                <i data-lucide="message-circle"></i>
+                Book Consultation Now
+            </button>
+            <p class="hero-contact">WhatsApp us at 083 428 9152</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Saint Beauty Studio</h2>
+                <p class="section-tagline">Skin | Body | Health</p>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://i.postimg.cc/KY5qKw50/fat-freeze.jpg" alt="Modern fat freezing equipment" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h3>Professional Body Sculpting & Skincare</h3>
+                    <p>Located at Hammetts Crossing Office Park, Saint Beauty Studio offers cutting-edge fat freezing technology to help you achieve your body goals safely and effectively.</p>
+                    <p>Our non-invasive treatments target stubborn fat cells, helping you sculpt your ideal silhouette without surgery or downtime.</p>
+                </div>
+                
+                <div class="about-benefits">
+                    <h4>Why Choose Fat Freezing?</h4>
+                    <ul>
+                        <li><i data-lucide="check"></i> Non-invasive and painless</li>
+                        <li><i data-lucide="check"></i> No surgery or downtime required</li>
+                        <li><i data-lucide="check"></i> FDA-approved technology</li>
+                        <li><i data-lucide="check"></i> Long-lasting results</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Special Packages</h2>
+                <p>Choose from our discounted packages and start your transformation journey today</p>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="packages-grid">
+                <!-- Package 1 -->
+                <div class="package-card">
+                    <div class="package-badge">25% OFF</div>
+                    <div class="package-header">
+                        <h3>Option 1</h3>
+                        <div class="package-pricing">
+                            <span class="original-price">R2400</span>
+                            <span class="sale-price">R1800</span>
+                        </div>
+                    </div>
+                    <div class="package-features">
+                        <div class="feature"><i data-lucide="check"></i> 1 Fat Freeze Session</div>
+                        <div class="feature"><i data-lucide="check"></i> Consultation Included</div>
+                        <div class="feature"><i data-lucide="check"></i> Aftercare Guidance</div>
+                    </div>
+                    <button class="btn btn-luxury" onclick="handleWhatsAppClick('Hi! I\'d like to book Option 1 package.')">
+                        <i data-lucide="message-circle"></i>
+                        Book This Package
+                    </button>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="package-card">
+                    <div class="package-badge">29% OFF</div>
+                    <div class="package-header">
+                        <h3>Option 2</h3>
+                        <div class="package-pricing">
+                            <span class="original-price">R4200</span>
+                            <span class="sale-price">R3000</span>
+                        </div>
+                    </div>
+                    <div class="package-features">
+                        <div class="feature"><i data-lucide="check"></i> 2 Fat Freeze Sessions</div>
+                        <div class="feature"><i data-lucide="check"></i> Consultation Included</div>
+                        <div class="feature"><i data-lucide="check"></i> FREE Meal Plan</div>
+                        <div class="feature"><i data-lucide="check"></i> Progress Tracking</div>
+                    </div>
+                    <button class="btn btn-luxury" onclick="handleWhatsAppClick('Hi! I\'d like to book Option 2 package.')">
+                        <i data-lucide="message-circle"></i>
+                        Book This Package
+                    </button>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="package-card">
+                    <div class="package-badge">26% OFF</div>
+                    <div class="package-header">
+                        <h3>Option 3</h3>
+                        <div class="package-pricing">
+                            <span class="original-price">R5700</span>
+                            <span class="sale-price">R4200</span>
+                        </div>
+                    </div>
+                    <div class="package-features">
+                        <div class="feature"><i data-lucide="check"></i> 3 Fat Freeze Sessions</div>
+                        <div class="feature"><i data-lucide="check"></i> Consultation Included</div>
+                        <div class="feature"><i data-lucide="check"></i> FREE Meal Plan</div>
+                        <div class="feature"><i data-lucide="check"></i> Progress Photos</div>
+                    </div>
+                    <button class="btn btn-luxury" onclick="handleWhatsAppClick('Hi! I\'d like to book Option 3 package.')">
+                        <i data-lucide="message-circle"></i>
+                        Book This Package
+                    </button>
+                </div>
+                
+                <!-- Package 4 -->
+                <div class="package-card">
+                    <div class="package-badge">25% OFF</div>
+                    <div class="package-header">
+                        <h3>Option 4</h3>
+                        <div class="package-pricing">
+                            <span class="original-price">R7200</span>
+                            <span class="sale-price">R5400</span>
+                        </div>
+                    </div>
+                    <div class="package-features">
+                        <div class="feature"><i data-lucide="check"></i> 4 Fat Freeze Sessions</div>
+                        <div class="feature"><i data-lucide="check"></i> Consultation Included</div>
+                        <div class="feature"><i data-lucide="check"></i> FREE Meal Plan</div>
+                        <div class="feature"><i data-lucide="check"></i> Monthly Check-ins</div>
+                    </div>
+                    <button class="btn btn-luxury" onclick="handleWhatsAppClick('Hi! I\'d like to book Option 4 package.')">
+                        <i data-lucide="message-circle"></i>
+                        Book This Package
+                    </button>
+                </div>
+                
+                <!-- Package 5 -->
+                <div class="package-card">
+                    <div class="package-badge">25% OFF</div>
+                    <div class="package-header">
+                        <h3>Option 5</h3>
+                        <div class="package-pricing">
+                            <span class="original-price">R8400</span>
+                            <span class="sale-price">R6300</span>
+                        </div>
+                    </div>
+                    <div class="package-features">
+                        <div class="feature"><i data-lucide="check"></i> 5 Fat Freeze Sessions</div>
+                        <div class="feature"><i data-lucide="check"></i> Consultation Included</div>
+                        <div class="feature"><i data-lucide="check"></i> FREE Meal Plan</div>
+                        <div class="feature"><i data-lucide="check"></i> VIP Support</div>
+                    </div>
+                    <button class="btn btn-luxury" onclick="handleWhatsAppClick('Hi! I\'d like to book Option 5 package.')">
+                        <i data-lucide="message-circle"></i>
+                        Book This Package
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Fat Freeze Only Pricing -->
+            <div class="fat-freeze-only">
+                <h3>Fat Freeze Only - Pricing</h3>
+                <div class="freeze-pricing-grid">
+                    <div class="freeze-item">
+                        <h4>1 Session</h4>
+                        <p>R2000</p>
+                    </div>
+                    <div class="freeze-item">
+                        <h4>2 Sessions</h4>
+                        <p>R3600</p>
+                    </div>
+                    <div class="freeze-item">
+                        <h4>3 Sessions</h4>
+                        <p>R5100</p>
+                    </div>
+                    <div class="freeze-item">
+                        <h4>4 Sessions</h4>
+                        <p>R6400</p>
+                    </div>
+                    <div class="freeze-item">
+                        <h4>5 Sessions</h4>
+                        <p>R7500</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Consultation Notice -->
+            <div class="consultation-notice">
+                <h4>Important Notice</h4>
+                <p>Consultation Fee: <strong>R200</strong> (waived if treatment is booked)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="section-header">
+                <h2>Book Your Appointment</h2>
+                <p>Choose your preferred booking option and take the first step towards your transformation.</p>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="booking-options">
+                <!-- Free Consultation -->
+                <div class="booking-card">
+                    <div class="booking-badge popular">Most Popular</div>
+                    <div class="booking-header">
+                        <h3>Free Consultation</h3>
+                        <p>Perfect for first-time clients</p>
+                        <div class="booking-price">
+                            <span class="original-price">R200</span>
+                            <span class="current-price">FREE</span>
+                        </div>
+                    </div>
+                    <div class="booking-features">
+                        <div class="feature"><i data-lucide="star"></i> Body assessment</div>
+                        <div class="feature"><i data-lucide="star"></i> Treatment planning</div>
+                        <div class="feature"><i data-lucide="star"></i> Package recommendations</div>
+                        <div class="feature"><i data-lucide="star"></i> No obligation</div>
+                    </div>
+                    <button class="btn btn-luxury" onclick="handleWhatsAppClick('Hi! I\'d like to book a FREE consultation to discuss fat freezing options.')">
+                        <i data-lucide="message-circle"></i>
+                        Book This Option
+                    </button>
+                </div>
+                
+                <!-- Consultation + Treatment -->
+                <div class="booking-card">
+                    <div class="booking-badge value">Best Value</div>
+                    <div class="booking-header">
+                        <h3>Consultation + Treatment</h3>
+                        <p>Start your journey today</p>
+                        <div class="booking-price">
+                            <span class="current-price">Package Price</span>
+                        </div>
+                    </div>
+                    <div class="booking-features">
+                        <div class="feature"><i data-lucide="star"></i> Immediate consultation</div>
+                        <div class="feature"><i data-lucide="star"></i> First treatment session</div>
+                        <div class="feature"><i data-lucide="star"></i> FREE meal plan included</div>
+                        <div class="feature"><i data-lucide="star"></i> Progress tracking setup</div>
+                    </div>
+                    <button class="btn btn-luxury" onclick="handleWhatsAppClick('Hi! I\'d like to book a consultation and start my first treatment session.')">
+                        <i data-lucide="message-circle"></i>
+                        Book This Option
+                    </button>
+                </div>
+                
+                <!-- Group Booking -->
+                <div class="booking-card">
+                    <div class="booking-badge save">Save More</div>
+                    <div class="booking-header">
+                        <h3>Group Booking</h3>
+                        <p>Bring a friend and save</p>
+                        <div class="booking-price">
+                            <span class="current-price">Special Rate</span>
+                        </div>
+                    </div>
+                    <div class="booking-features">
+                        <div class="feature"><i data-lucide="star"></i> 2+ people discount</div>
+                        <div class="feature"><i data-lucide="star"></i> Shared consultation</div>
+                        <div class="feature"><i data-lucide="star"></i> Group support</div>
+                        <div class="feature"><i data-lucide="star"></i> Additional savings</div>
+                    </div>
+                    <button class="btn btn-luxury" onclick="handleWhatsAppClick('Hi! I\'d like to book a group consultation for fat freezing packages.')">
+                        <i data-lucide="message-circle"></i>
+                        Book This Option
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Time Slots & Special Offers -->
+            <div class="booking-extras">
+                <div class="time-slots">
+                    <h3><i data-lucide="clock"></i> Available Time Slots</h3>
+                    <p>Choose your preferred consultation time</p>
+                    <div class="time-grid">
+                        <button class="time-slot" onclick="handleWhatsAppClick('Hi! I\'d like to book a consultation at 09:00 - 10:00. What dates are available?')">
+                            09:00 - 10:00 <i data-lucide="calendar"></i>
+                        </button>
+                        <button class="time-slot" onclick="handleWhatsAppClick('Hi! I\'d like to book a consultation at 10:30 - 11:30. What dates are available?')">
+                            10:30 - 11:30 <i data-lucide="calendar"></i>
+                        </button>
+                        <button class="time-slot" onclick="handleWhatsAppClick('Hi! I\'d like to book a consultation at 12:00 - 13:00. What dates are available?')">
+                            12:00 - 13:00 <i data-lucide="calendar"></i>
+                        </button>
+                        <button class="time-slot" onclick="handleWhatsAppClick('Hi! I\'d like to book a consultation at 14:00 - 15:00. What dates are available?')">
+                            14:00 - 15:00 <i data-lucide="calendar"></i>
+                        </button>
+                        <button class="time-slot" onclick="handleWhatsAppClick('Hi! I\'d like to book a consultation at 15:30 - 16:30. What dates are available?')">
+                            15:30 - 16:30 <i data-lucide="calendar"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="special-offers">
+                    <h3><i data-lucide="gift"></i> Limited Time Offers</h3>
+                    <p>Exclusive deals for new clients</p>
+                    <div class="offer">
+                        <h4>FREE Meal Plan</h4>
+                        <p>Get a personalized nutrition guide with any package booking</p>
+                    </div>
+                    <div class="offer">
+                        <h4>Bring a Friend Discount</h4>
+                        <p>Save 15% when you book together</p>
+                    </div>
+                    <div class="offer">
+                        <h4>Package Deals</h4>
+                        <p>Up to 29% off multi-session packages</p>
+                    </div>
+                    <button class="btn btn-hero" onclick="handleWhatsAppClick('Hi! I\'d like to learn more about your current special offers and book a consultation.')">
+                        <i data-lucide="message-circle"></i>
+                        Claim Special Offer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Gallery</h2>
+                <p>Take a look inside Saint Beauty Studio and see the professional environment where your transformation journey begins.</p>
+                <div class="divider"></div>
+            </div>
+            
+            <!-- Category Filter -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" onclick="filterGallery('all')">All</button>
+                <button class="filter-btn" onclick="filterGallery('clinic')">Clinic</button>
+                <button class="filter-btn" onclick="filterGallery('service')">Service</button>
+                <button class="filter-btn" onclick="filterGallery('results')">Results</button>
+                <button class="filter-btn" onclick="filterGallery('technology')">Technology</button>
+                <button class="filter-btn" onclick="filterGallery('ambiance')">Ambiance</button>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="clinic" onclick="openLightbox('https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&q=80')">
+                    <img src="https://i.postimg.cc/YSnWvzT5/relaxing-treayting-environment.jpg" alt="Relaxing Treatment Environment" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <span class="gallery-category">Clinic</span>
+                            <h3>Relaxing Treatment Environment</h3>
+                            <p>Our serene consultation room designed for your comfort</p>
+                        </div>
+                        <i data-lucide="zoom-in"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="service" onclick="openLightbox('https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=800&q=80')">
+                    <img src="https://i.postimg.cc/j2VCfgcF/professional-consultation.jpg" alt="Professional Consultation" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <span class="gallery-category">Service</span>
+                            <h3>Professional Consultation</h3>
+                            <p>Personalized treatment planning with our experts</p>
+                        </div>
+                        <i data-lucide="zoom-in"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="clinic" onclick="openLightbox('https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=800&q=80')">
+                    <img src="https://i.postimg.cc/m2st2ntc/luxury-waitiing-area.jpg" alt="Luxury Waiting Area" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <span class="gallery-category">Clinic</span>
+                            <h3>Luxury Waiting Area</h3>
+                            <p>Comfortable and elegant reception space</p>
+                        </div>
+                        <i data-lucide="zoom-in"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="results" onclick="openLightbox('https://images.unsplash.com/photo-1465146544425-f00d5f5c8f07?auto=format&fit=crop&w=800&q=80')">
+                    <img src="https://i.postimg.cc/Dwf01bQn/natural-beauty-enhancement.jpg" alt="Natural Beauty Enhancement" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <span class="gallery-category">Results</span>
+                            <h3>Natural Beauty Enhancement</h3>
+                            <p>Achieving natural-looking body contouring results</p>
+                        </div>
+                        <i data-lucide="zoom-in"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="ambiance" onclick="openLightbox('https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=800&q=80')">
+                    <img src="https://i.postimg.cc/Qd6tmxS5/ambient.jpg" alt="Ambient Lighting" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <span class="gallery-category">Ambiance</span>
+                            <h3>Ambient Lighting</h3>
+                            <p>Soothing atmosphere for ultimate relaxation</p>
+                        </div>
+                        <i data-lucide="zoom-in"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="technology" onclick="openLightbox('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80')">
+                    <img src="https://i.postimg.cc/hjmtK8nb/modern-fatv-freezing-equipment.jpg" alt="Modern Equipment" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <span class="gallery-category">Technology</span>
+                            <h3>Modern Equipment</h3>
+                            <p>State-of-the-art fat freezing technology</p>
+                        </div>
+                        <i data-lucide="zoom-in"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to start your transformation? Contact us today to schedule your personalized consultation.</p>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>083 428 9152</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Hammetts Crossing Office Park<br>Professional Body Sculpting & Skincare Clinic</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="message-circle"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>Quick and easy booking via WhatsApp</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <h3>Follow Us</h3>
+                        <a href="https://instagram.com/saintbeautystudio" target="_blank" class="social-link">
+                            <i data-lucide="instagram"></i>
+                            <div>
+                                <h4>Instagram</h4>
+                                <p>@saintbeautystudio</p>
+                            </div>
+                        </a>
+                        <a href="https://facebook.com/saintbeautystudio" target="_blank" class="social-link">
+                            <i data-lucide="facebook"></i>
+                            <div>
+                                <h4>Facebook</h4>
+                                <p>@saintbeautystudio</p>
+                            </div>
+                        </a>
+                        <a href="https://tiktok.com/@saintbeautystudio" target="_blank" class="social-link">
+                            <div class="tiktok-icon">T</div>
+                            <div>
+                                <h4>TikTok</h4>
+                                <p>@saintbeautystudio</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+                    <div class="cta-card">
+                        <h3>Ready to Transform Your Body?</h3>
+                        <p>Don't wait! Our massive specials are for a limited time only. Book your consultation today and take the first step towards your ideal silhouette.</p>
+                        <button class="btn btn-hero btn-lg" onclick="handleWhatsAppClick('Hi! I\'d like to book a consultation for fat freezing packages.')">
+                            <i data-lucide="message-circle"></i>
+                            WhatsApp Consultation
+                        </button>
+                        <button class="btn btn-elegant btn-lg" onclick="window.open('tel:0834289152')">
+                            <i data-lucide="phone"></i>
+                            Call 083 428 9152
+                        </button>
+                    </div>
+                    
+                    <div class="process-card">
+                        <h3>What to Expect</h3>
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div>
+                                <h4>Consultation</h4>
+                                <p>Discuss your goals and assess treatment areas</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div>
+                                <h4>Treatment Plan</h4>
+                                <p>Customize your package based on your needs</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div>
+                                <h4>Transform</h4>
+                                <p>Start your journey to your ideal body shape</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Saint Beauty Studio</h3>
+                    <p class="footer-tagline">Skin | Body | Health</p>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>083 428 9152</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Hammetts Crossing Office Park</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#packages">Packages</a>
+                    <a href="#booking">Booking</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/saintbeautystudio" target="_blank">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/saintbeautystudio" target="_blank">
+                            <i data-lucide="facebook"></i>
+                        </a>
+                        <a href="https://tiktok.com/@saintbeautystudio" target="_blank">
+                            <div class="tiktok-icon">T</div>
+                        </a>
+                    </div>
+                    <button class="btn btn-whatsapp" onclick="handleWhatsAppClick('Hi! I\'d like to book a consultation for fat freezing packages.')">
+                        <i data-lucide="message-circle"></i>
+                        Book Now
+                    </button>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Saint Beauty Studio. All rights reserved. | Professional Body Sculpting & Skincare</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">
+            <i data-lucide="x"></i>
+        </button>
+        <img id="lightbox-image" src="" alt="Gallery image" onclick="event.stopPropagation()">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
